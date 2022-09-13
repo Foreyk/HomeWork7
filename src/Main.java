@@ -22,20 +22,21 @@ public class Main {
 //                          ||||| 1 ЧАСТЬ |||||
 
     //task1_1
-    private static void task1() {
+    private static void task1_1() {
         int money = 29_000;
         int total = 0;
-        int i = 0;
-        while (total <= 2_459_000) {
+        int month = 0;
+        int purpose = 2_459_000;
+        while (total <= purpose) {
             total = total + total / 100;
             total = total + money;
-            i++;
-            System.out.printf("Месяц %d, сумма накоплений равна %d рублей. \n", i, total);
+            month = month + 1;
+            System.out.printf("Месяц %d, сумма накоплений равна %d рублей. \n", month, total);
         }
     }
 
     //task1_2
-    private static void task2() {
+    private static void task1_2() {
         int i = 0;
         while (i < 10) {
             i++;
@@ -48,7 +49,7 @@ public class Main {
     }
 
     //task1_3
-    private static void task3() {
+    private static void task1_3() {
         int populationCountryY = 12_000_000;
         int brithRatePer1000 = 17;
         int deadRatePer1000 = 8;
@@ -73,10 +74,10 @@ public class Main {
         int purpose = 12_000_000;
         int percent = 7;
         int savings = 0;
-        for (int i = 1; savings < purpose; i++) {
+        for (int month = 1; savings < purpose; month++) {
             savings = savings + depositAmount;
             savings = savings + savings / 100 * percent;
-            System.out.printf("Спустя  %d-й месяц, сумма накоплений будет равна %d рублей. \n", i, savings);
+            System.out.printf("Спустя  %d-й месяц, сумма накоплений будет равна %d рублей. \n", month, savings);
         }
     }
 
@@ -86,11 +87,11 @@ public class Main {
         var purpose = 12_000_000;
         var percent = 7;
         var savings = 0f;
-        for (int i = 1; savings <= purpose; i++) {
+        for (int month = 1; savings <= purpose; month++) {
             savings = savings + depositAmount;
             savings = savings + savings / 100 * percent;
-            if (i % 6 == 0) {
-                System.out.printf("Спустя  %d-й месяц, сумма накоплений будет равна %.2f рублей. \n", i, savings);
+            if (month % 6 == 0) {
+                System.out.printf("Спустя  %d-й месяц, сумма накоплений будет равна %.2f рублей. \n", month, savings);
             }
         }
     }
@@ -102,11 +103,11 @@ public class Main {
         int numberOfYears = 9;
         int totalMonths = numberOfYears * 12;
         var savings = 15000f;
-        for (int i = 1; i <= totalMonths; i++) {
+        for (int month = 1; month <= totalMonths; month++) {
             savings = savings + depositAmount;
             savings = savings + savings / 100 * percent;
-            if (i % 6 == 0) {
-                System.out.printf("Спустя  %d-й месяц, сумма накоплений будет равна %.2f рублей. \n", i, savings);
+            if (month % 6 == 0) {
+                System.out.printf("Спустя  %d-й месяц, сумма накоплений будет равна %.2f рублей. \n", month, savings);
             }
         }
     }
@@ -135,14 +136,14 @@ public class Main {
     //task3_1
     private static void task3_1() {
         int frequencyCometYear = 79;
-        int year = 2022;
+        int yearOfReference = 2022;
         int periodOfYears = 200;
-        int minusYears = year - periodOfYears;
-        int plusYears = year + (periodOfYears / 2);
-        int i = minusYears;
-        for (; i <= plusYears; i++) {
-            if (i % frequencyCometYear == 0) {
-                System.out.println(i);
+        int minusYears = yearOfReference - periodOfYears;
+        int plusYears = yearOfReference + (periodOfYears / 2);
+        int years = minusYears;
+        for (; years <= plusYears; years++) {
+            if (years % frequencyCometYear == 0) {
+                System.out.println(years);
             }
         }
     }
